@@ -17,13 +17,13 @@ Style guide for Web Application layout (HTML)
 
 ### Technical Concerns
 
-###### [Style [U000](#style-u000)]
+###### [Style [U001](#style-u001)]
 
 - Treat all component updates as a program change. i.e. do not "update" a package just to get the latest version
 
 *Why?*: Program changes are only done to add functionality or fix an issue.  Arbitrary changes without a concious reason will at best do nothing, and at worse result in an outage
 
-###### [Style [U000](#style-u000)]
+###### [Style [U002](#style-u002)]
 
 - All components not part of the application must be described by a metadata file, e.g. package.json
 
@@ -31,19 +31,19 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: important to ensure all developers are using the same version of the component, or at the least are able to easily determine what version should be used
 
-###### [Style [U000](#style-u000)]
+###### [Style [U003](#style-u003)]
 
 - Do not check 3rd-party components into project repositories
 
 *Why?*: Large components such as entity framework and others can take up ten's of megabytes across thousands of files, causing the repository to bloat.   
 
-###### [Style [U000](#style-u000)]
+###### [Style [U004](#style-u004)]
 
 - Do not modify 3rd-party components.  Use additional files to configure or override such components, or at the very least create a fork of the component
 
 *Why?*: Will make updating a component nearly impossible without breaking application functionality.  
 
-###### [Style [U000](#style-u000)]
+###### [Style [U005](#style-u005)]
 
 - Use minified verisons of JS components in Production
 
@@ -51,7 +51,7 @@ Style guide for Web Application layout (HTML)
 
 ### Current Libraries
 
-###### [Style [U000](#style-u000)]
+###### [Style [U006](#style-u006)]
 
 - Use Bootstrap version 3.x as our primary CSS framework
 
@@ -66,13 +66,13 @@ Style guide for Web Application layout (HTML)
 
 ## UI Controls
 
-###### [Style [U000](#style-u000)]
+###### [Style [U050](#style-u050)]
 
 - Navigation links must allow right-click behavior to open a new tab or window
 
 *Why?*: Expected user behavior
 
-###### [Style [U000](#style-u000)]
+###### [Style [U051](#style-u051)]
 
 - Dropdown lists must use the `Select2` combobox library
 
@@ -80,7 +80,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Provices clean behavior when entering search text (avoids typing in the middle of the selected item)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U052](#style-u052)]
 
 - Dropdown lists must include a typeahead feature
 
@@ -88,13 +88,13 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Not harder to add than the standard input
 
-###### [Style [U000](#style-u000)]
+###### [Style [U053](#style-u053)]
 
 - Use `<table>` for standard grids
 
 *Why?*: Simple and fast
 
-###### [Style [U000](#style-u000)]
+###### [Style [U054](#style-u054)]
 
 - Use `SlickGrid` for interactive search pages and large data sets
 
@@ -102,7 +102,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Works well with filter-by-column pattern (each column in displayed table includes own filter)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U055](#style-u055)]
 
 - All Date / time fields must use a time picker
 
@@ -110,7 +110,7 @@ Style guide for Web Application layout (HTML)
 
 *why?*: Prevents malformed dates
 
-###### [Style [U000](#style-u000)]
+###### [Style [U056](#style-u056)]
 
 - Use `bootstrap` modal popups
 
@@ -118,7 +118,7 @@ Style guide for Web Application layout (HTML)
 
 ### Provisional
 
-###### [Style [U000](#style-u000)]
+###### [Style [U057](#style-u057)]
 
 - Use `??????` for date / time dropdowns
 
@@ -129,7 +129,7 @@ Style guide for Web Application layout (HTML)
 ## Layout
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U100](#style-u100)]
 
 - Top level layout should consist of single-column variable width
 
@@ -137,39 +137,39 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Allow seach pages to fit full width of viewport 
 
-![Example"](assets/U000 - Page Layout.png)
+![Example"](assets/U100 - Page Layout.png)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U101](#style-u101)]
 
 - Data Entry pages should use a fixed column max width of ~ 960 px
 
 *Why?*: Allow for 2 documents side by side on 1920x1080p monitor
 
-###### [Style [U000](#style-u000)]
+###### [Style [U102](#style-u102)]
 
 - Application must include a menu bar at top of page at all times
 
 *Why?*: User must have access to primary navigation interface at all times
 
-![Example"](assets/U000 - Menu Bar.png)
+![Example"](assets/U102 - Menu Bar.png)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U103](#style-u103)]
 
 - Include application name / logo on far LH side of menu bar
 
 *Why?*: Easily identify the application user is looking at
 
-![Example"](assets/U000 - App Title.png)
+![Example"](assets/U103 - App Title.png)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U104](#style-u104)]
 
 - Logged in user should appear on the RH side of menu bar
 
 *Why?*: Ensure user is running application under proper credentials.  
 
-![Example"](assets/U000 - Logged in User.png)
+![Example"](assets/U104 - Logged in User.png)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U105](#style-u105)]
 
 - Clicking on logged in user name should display dropdown menu include
     - settings
@@ -177,21 +177,21 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Need a location for user-specific options/actions 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U106](#style-u106)]
 
 - Current app build, date, commit, and database version should be displayed in the application footer
 
 *Why?*: See critical application metadata at glance for informational purposes or in diagnosing bugs / configuration problems
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U107](#style-u107)]
 
 - Use header/detail layout pattern for primary application entities e.g. a vendor having info, contacts, materials, payments, etc. 
 
 *Why?*: Once the user locates an entity, they should be able to easily view all information about that entity
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U108](#style-u108)]
 
 -
 
@@ -199,21 +199,21 @@ Style guide for Web Application layout (HTML)
 
 ## Navigation
 
-###### [Style [U000](#style-u000)]
+###### [Style [U150](#style-u150)]
 
 - Menu bar must contain top-level navigation at all times
 
 *Why?*: Easier for user to move around application / reduces number of navigation clicks
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U151](#style-u151)]
 
 - Page-specific menu options must be between site logo and top-level navigation
 
 *Why?*: Arbitrarily placing these to the beginning, middle, or end of main navigation will confused users - be consistent
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U151](#style-u151)]
 
 - Query string must not contain any primary key values - only domain-specific codes (may require composite parameters)
 
@@ -221,19 +221,19 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Users tend to associate specific meaning with displayed values - purpose of primary key is to provide uniqueness and referential integrity - meaning they should never be updated directly.  
 
-###### [Style [U000](#style-u000)]
+###### [Style [U152](#style-u152)]
 
 - Query string must uniquely select an entity, or reliably choose an appropriate entity
 
 *Why?*: Having the same parameters cause different entities to load is confusing and will very likely result in data quality issues.  
 
-###### [Style [U000](#style-u000)]
+###### [Style [U153](#style-u153)]
 
 - Clicking on site lgo should return user to main page
 
 *Why?*: Provide consistent way to get back to the main page.  
 
-###### [Style [U000](#style-u000)]
+###### [Style [U154](#style-u154)]
 
 - Minimize the number of sub-menu's in the main menu bar
 
@@ -250,7 +250,7 @@ Style guide for Web Application layout (HTML)
 ## Search Pages
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U200](#style-u200)]
 
 - Search results should be exportable to CSV
 
@@ -258,7 +258,7 @@ Style guide for Web Application layout (HTML)
 
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U201](#style-u201)]
 
 - Standard searches should finish within 5000ms
 
@@ -267,26 +267,26 @@ Style guide for Web Application layout (HTML)
 *Why?*: Longer searches can place unncessary load on the server, or indicate poorly otpimized queries.  
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U202](#style-u202)]
 
 - Certain long searches are allowed provided they can complete in 30-60 seconds
 
 *Why?*: Some searches requiring data across many entities will naturally take longer, but can be very useful to users (e.g. cross reference basic sales history with products).  Remember though that this is primarily an OLTP system, and some types of searches are better served with OLAP / offline queries
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U203](#style-u203)]
 
 - Long searches must display a waiting / loading message while the search is running.  Should give the user an option to cancel the search
 
 *Why?*: Users need a visual indication the program is "working"
 
-###### [Style [U000](#style-u000)]
+###### [Style [U204](#style-u204)]
 
 - Search timeouts should not crash the current page. If the max timeout it hit, the user should be given an appropriate error message
 
 *Why?*: Searches can timeout for many reasons, and the application needs to anticipate these.  
 
-###### [Style [U000](#style-u000)]
+###### [Style [U205](#style-u205)]
 
 - Default page size should be a minimum of 50 items, with a dropdown to allow the user to select 25,50,100,500 or Unlimited
 
@@ -294,25 +294,25 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Giving the user an option to show more balances performance with user convenience
 
-###### [Style [U000](#style-u000)]
+###### [Style [U206](#style-u206)]
 
 - Column headings should be sortable
 
 *Why?*: Sorting is often a useful secondary filtering technique
 
-###### [Style [U000](#style-u000)]
+###### [Style [U207](#style-u207)]
 
 - Search filters should not take up more than 25% of the visible page, otherwise provide a collapsible filter panel
 
 *Why?*: Devote more screen real-estate to the actual search results.  
 
-###### [Style [U000](#style-u000)]
+###### [Style [U208](#style-u208)]
 
 - Display total number of search results (not on current page, but for the entire filter)
 
 *Why?*: Count of items is almost always useful and relevant information for the user
 
-###### [Style [U000](#style-u000)]
+###### [Style [U209](#style-u209)]
 
 - Displayed entities should have a hyperlink to open the appropriate master/detail page over the identifying code (vs an "open" button)
 
@@ -320,7 +320,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: do not need an additonal column dedicated to opening the item
 
-###### [Style [U000](#style-u000)]
+###### [Style [U210](#style-u210)]
 
 - Current filter/search values should be visible in query string
 
@@ -328,7 +328,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Allows other areas of the application (or outside the application) to display targeted search results
 
-###### [Style [U000](#style-u000)]
+###### [Style [U211](#style-u211)]
 
 - Searches should be GET requests vs POST requests
 
@@ -337,34 +337,34 @@ Style guide for Web Application layout (HTML)
 
 ## Data Entry Pages
 
-###### [Style [U000](#style-u000)]
+###### [Style [U250](#style-u250)]
 
 - Users should be able to save work using ctrl+s keystroke
 
 *Why?*: near-universal keyboard shortcut users understand
 
-###### [Style [U000](#style-u000)]
+###### [Style [U251](#style-u251)]
 
 - All work in edit mode must be atomic - save/cancel as a unit.
 
 *Why?*: User needs to trust that the system won't change permanent state until they click "save"
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U252](#style-u252)]
 
 - Users should be alerted before doing any action that will cause them to lose unsaved work. (note, do not alert if no changes, even if in edit mode)
 
 *Why?*: Do not want users to accidentally lose changes because of unintended action
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U253](#style-u253)]
 
 - use `boostrap` `warning` and `error` classes for validation
 
 *Why?*: Must show fields failing validation rules
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U254](#style-u254)]
 
 - Use dynamic panel at TOP of form to display validation failures 
 
@@ -374,7 +374,7 @@ Style guide for Web Application layout (HTML)
 
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U255](#style-u255)]
 
 - Controls must display appropriate `warning` and `error` classes if they fail validation immediately (after user leaves the control)
 
@@ -382,7 +382,7 @@ Style guide for Web Application layout (HTML)
 
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U256](#style-u256)]
 
 - Users must be able to do a full edit cycle using the keyboard
 
@@ -390,64 +390,64 @@ Style guide for Web Application layout (HTML)
 
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U257](#style-u257)]
 
 - Every data entry page must include an edit menu including edit, save, cancel options
 
 *Why?*: Basic CRUD functionality that should be consistent between pages
 
-###### [Style [U000](#style-u000)]
+###### [Style [U258](#style-u258)]
 
 - Explicitly specify spellcheck attribute on text `<input>`'s and `<textarea>`
 
 *Why?*: Users used tospellcheck in their email, word processing applications
 
-###### [Style [U000](#style-u000)]
+###### [Style [U259](#style-u259)]
 
 - Enable typeahead for all lookup data (via lookup tables or related entities).  For non-standard lookup, create a dynamic lookup based on distinct values within that particular column. 
 
 *Why?*: Helps user to select the correct codes / options for the particular field
 
-###### [Style [U000](#style-u000)]
+###### [Style [U260](#style-u260)]
 
 - Users should be able to clone an entity into a new entity (where possible)
 
 *Why?*: Many entities are repeated with minor variations, and this greatly reduces the amount of data entry work required per entity.  
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U261](#style-u261)]
 
 - Users should be given the option of a "bulk" data entry mode (where possible / feasible)
 
 *Why?*: Users often need to add several items at once, or change values across several entities, and this can save the user time.
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U262](#style-u262)]
 
 - Page should show when the entity was last updated / created and last user to update
 
 *Why?*: Basic auditing data that can help quickly answer questions about the entity (e.g. did something change recently?)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U263](#style-u263)]
 
 - Pages must *not* be allowed to double-submit post data
 
 *Why?*: Very common source of duplicate/bad data
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U264](#style-u264)]
 
 - When on the last cell of a row's grid, hitting enter starts a new row
 
 *Why?*: Default behavior in Excel
 
-###### [Style [U000](#style-u000)]
+###### [Style [U265](#style-u265)]
 
 - if user enters any data into a row, form should treat it as a new line, do not require a user to click "new line"
 
 *Why?*: Any time user enters data in save mode, they will assume it will go thru unless they receive a warning - requiring a click is a subtle way for data loss (that the user might not catch)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U266](#style-u266)]
 
 - Keyboard shortcuts should be displayed next to menu items, or via tooltips on save/edit/cancel buttons
 
@@ -455,19 +455,19 @@ Style guide for Web Application layout (HTML)
 
 ## Reports
 
-###### [Style [U000](#style-u000)]
+###### [Style [U300](#style-u300)]
 
 - All Reports must include the date printed
 
 *Why?*: User needs to understand the age of the printed data
 
-###### [Style [U000](#style-u000)]
+###### [Style [U301](#style-u301)]
 
 - All reports must include the report file / template in the footer
 
 *Why?*: Needed to quickly locate the appropriate source file of the report
 
-###### [Style [U000](#style-u000)]
+###### [Style [U302](#style-u302)]
 
 - All Reports should show page X of Y in the footer.  
 
@@ -475,7 +475,7 @@ Style guide for Web Application layout (HTML)
 
 ## Security
 
-###### [Style [U000](#style-u000)]
+###### [Style [U350](#style-u350)]
 
 - Do not show links, controls, functions, etc that a user does not have access to
 
@@ -484,13 +484,13 @@ Style guide for Web Application layout (HTML)
 *Why?*: Most people will have what they need to do their job
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U351](#style-u351)]
 
 - Each application must have a site-wide message / page to display to a user that does not have access to the site. 
 
 *Why?*: Need to explain to user what application they are accessing so they can request access if necessary
 
-###### [Style [U000](#style-u000)]
+###### [Style [U352](#style-u352)]
 
 - Page URL's must be secured so that if the user gets a link to a page they do not have access to, they are re-routed to an accessed denied page.  
 
@@ -498,20 +498,20 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: user may try to craft a custom url
 
-###### [Style [U000](#style-u000)]
+###### [Style [U353](#style-u353)]
 
 - Access denied page should include a link / function to request access
 
 *Why?*: Convenience for the user
 
-###### [Style [U000](#style-u000)]
+###### [Style [U354](#style-u354)]
 
 - Access denied page should include a link to go back to previous page or main application menu
 
 *Why?*: Convenience for the user
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U355](#style-u355)]
 
 - Horizontal - access to specific routes / functions - should be specified by application roles.  Roles can secure several routes, but a route may only be secured by a single role
 
@@ -522,13 +522,13 @@ Style guide for Web Application layout (HTML)
 *Why?*: Specifying multiple roles per route complicates security management - better to create a new unique role for this need if a single, existing role does not fit
 
 
-###### [Style [U000](#style-u000)]
+###### [Style [U356](#style-u356)]
 
 - Each application should have at least one role, `View_Myapp_Role` that determines if a user can even load the application. 
 
 *Why?*: Need a basic handle for securing access to an application
 
-###### [Style [U000](#style-u000)]
+###### [Style [U357](#style-u357)]
 
 - Vertical - access to specific routes / functions - meaning a subset of entities such as Edit Customers, but only west coast customers - should be handled via custom security tables linked to appropriate groups
 
@@ -539,7 +539,7 @@ Style guide for Web Application layout (HTML)
 
 ## User Preferences
 
-###### [Style [U000](#style-u000)]
+###### [Style [U400](#style-u400)]
 
 - Users should be able to select default setting relevant to their department or location
 
@@ -549,7 +549,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Prevent user from accidentally creating / updating entities in an unrelated area (e.g. entering a new order at the wrong factory)
 
-###### [Style [U000](#style-u000)]
+###### [Style [U401](#style-u401)]
 
 - Users should be able to specify a default landing page other than the main menu, possibly with a default search.  
 
