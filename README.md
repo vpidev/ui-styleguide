@@ -21,13 +21,13 @@ Style guide for Web Application layout (HTML)
 
 - Treat all component updates as a program change. i.e. do not "update" a package just to get the latest version
 
-*Why?*: Program changes are only done to add functionality or fix an issue.  Arbitrary changes without a concious reason will at best do nothing, and at worse result in an outage
+*Why?*: Program changes are only done to add functionality or fix an issue.  Arbitrary changes without a conscious reason will at best do nothing, and at worse result in an outage
 
 ###### [Style [U002](#style-u002)]
 
 - All components not part of the application must be described by a metadata file, e.g. package.json
 
-*Why?*: allows use of tools e.g. NPM to retreive new verisions if needed
+*Why?*: allows use of tools e.g. NPM to retrieve new versions if needed
 
 *Why?*: important to ensure all developers are using the same version of the component, or at the least are able to easily determine what version should be used
 
@@ -45,7 +45,7 @@ Style guide for Web Application layout (HTML)
 
 ###### [Style [U005](#style-u005)]
 
-- Use minified verisons of JS components in Production
+- Use minified versions of JS components in Production
 
 *Why?*: The client must download each JS file used, and minification can significantly reduce the size of the file, increasing application performance
 
@@ -57,9 +57,9 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Bootstrap provides the most straightforward approach to a clean, professional-looking UI
 
-*Why?*: Boostrap 4.x is still in Alpha as of August 2016
+*Why?*: Bootstrap 4.x is still in Alpha as of August 2016
 
-*Why?*: Want to be ready to optimze sites for mobile
+*Why?*: Want to be ready to optimize sites for mobile
 
 
 
@@ -78,7 +78,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Provides autocomplete support
 
-*Why?*: Provices clean behavior when entering search text (avoids typing in the middle of the selected item)
+*Why?*: Provides clean behavior when entering search text (avoids typing in the middle of the selected item)
 
 ###### [Style [U052](#style-u052)]
 
@@ -135,9 +135,9 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Let children pages define side bars as necessary
 
-*Why?*: Allow seach pages to fit full width of viewport 
+*Why?*: Allow search pages to fit full width of viewport 
 
-![Example"](assets/U100 - Page Layout.png)
+![Example](assets/U100 - Page Layout.png)
 
 ###### [Style [U101](#style-u101)]
 
@@ -151,7 +151,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: User must have access to primary navigation interface at all times
 
-![Example"](assets/U102 - Menu Bar.png)
+![Example](assets/U102 - Menu Bar.png)
 
 ###### [Style [U103](#style-u103)]
 
@@ -159,7 +159,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Easily identify the application user is looking at
 
-![Example"](assets/U103 - App Title.png)
+![Example](assets/U103 - App Title.png)
 
 ###### [Style [U104](#style-u104)]
 
@@ -167,7 +167,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Ensure user is running application under proper credentials.  
 
-![Example"](assets/U104 - Logged in User.png)
+![Example](assets/U104 - Logged in User.png)
 
 ###### [Style [U105](#style-u105)]
 
@@ -177,12 +177,15 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Need a location for user-specific options/actions 
 
+![Example](assets/U105 - User Dropdown Menu.png)
+
 ###### [Style [U106](#style-u106)]
 
 - Current app build, date, commit, and database version should be displayed in the application footer
 
 *Why?*: See critical application metadata at glance for informational purposes or in diagnosing bugs / configuration problems
 
+![Example](assets/U106 - Footer Build Info.png)
 
 ###### [Style [U107](#style-u107)]
 
@@ -190,12 +193,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Once the user locates an entity, they should be able to easily view all information about that entity
 
-
-###### [Style [U108](#style-u108)]
-
--
-
-*Why?*:
+![Example](assets/U107 - Header Detail Pattern.png)
 
 ## Navigation
 
@@ -205,6 +203,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Easier for user to move around application / reduces number of navigation clicks
 
+![Example](assets/U150 - Top Level Navigation.png)
 
 ###### [Style [U151](#style-u151)]
 
@@ -212,8 +211,9 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Arbitrarily placing these to the beginning, middle, or end of main navigation will confused users - be consistent
 
+![Example](assets/U151 - Page Menu Options.png)
 
-###### [Style [U151](#style-u151)]
+###### [Style [U152](#style-u152)]
 
 - Query string must not contain any primary key values - only domain-specific codes (may require composite parameters)
 
@@ -221,23 +221,31 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Users tend to associate specific meaning with displayed values - purpose of primary key is to provide uniqueness and referential integrity - meaning they should never be updated directly.  
 
-###### [Style [U152](#style-u152)]
+good:  `http://myapp/customer/account=456888`
 
-- Query string must uniquely select an entity, or reliably choose an appropriate entity
+good:  `http://myapp/product/code=8844&size=quart`
 
-*Why?*: Having the same parameters cause different entities to load is confusing and will very likely result in data quality issues.  
+Bad:  `http://myapp/customer/custid=15000`
 
 ###### [Style [U153](#style-u153)]
 
-- Clicking on site lgo should return user to main page
+- Query string must uniquely select an entity, or reliably choose an appropriate entity.
+
+*Why?*: Having the same parameters cause different entities to load is confusing and will very likely result in data quality issues.  
+
+###### [Style [U154](#style-u154)]
+
+- Clicking on site logo should return user to main page
 
 *Why?*: Provide consistent way to get back to the main page.  
 
-###### [Style [U154](#style-u154)]
+###### [Style [U155](#style-u155)]
 
 - Minimize the number of sub-menu's in the main menu bar
 
 *Why?*: minimize user clicks
+
+![Example](assets/U155 - Minimize Menu Clicks.png)
 
 ### Provisional
 
@@ -264,7 +272,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Better user experience
 
-*Why?*: Longer searches can place unncessary load on the server, or indicate poorly otpimized queries.  
+*Why?*: Longer searches can place unnecessary load on the server, or indicate poorly optimized queries.  
 
 
 ###### [Style [U202](#style-u202)]
@@ -280,6 +288,10 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Users need a visual indication the program is "working"
 
+*Why?*: Don't hold the user "prisoner" by making them wait for a long search (they may have realized they entered too broad of a search
+
+![Example](assets/U203 - Long Search Message.png)
+
 ###### [Style [U204](#style-u204)]
 
 - Search timeouts should not crash the current page. If the max timeout it hit, the user should be given an appropriate error message
@@ -292,7 +304,9 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: A good default should fill the entire visible page.  
 
-*Why?*: Giving the user an option to show more balances performance with user convenience
+*Why?*: Giving the user an option to show more balanced performance with user convenience
+
+![Example](assets/U205 - Paging Size.png)
 
 ###### [Style [U206](#style-u206)]
 
@@ -306,11 +320,15 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Devote more screen real-estate to the actual search results.  
 
+![Example](assets/U207 - Filter Panel Size.png)
+
 ###### [Style [U208](#style-u208)]
 
 - Display total number of search results (not on current page, but for the entire filter)
 
 *Why?*: Count of items is almost always useful and relevant information for the user
+
+![Example](assets/U208 - Display Search Count.png)
 
 ###### [Style [U209](#style-u209)]
 
@@ -318,7 +336,9 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Each row should already contain an identifying value to distinguish from other results.
 
-*Why?*: do not need an additonal column dedicated to opening the item
+*Why?*: do not need an additional column dedicated to opening the item
+
+![Example](assets/U209 - Grid Open Entity.png)
 
 ###### [Style [U210](#style-u210)]
 
@@ -327,6 +347,8 @@ Style guide for Web Application layout (HTML)
 *Why?*: Allows user to bookmark current search
 
 *Why?*: Allows other areas of the application (or outside the application) to display targeted search results
+
+good: `http://myapp/productsearch/q=Red%20Paint`
 
 ###### [Style [U211](#style-u211)]
 
@@ -356,6 +378,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Do not want users to accidentally lose changes because of unintended action
 
+![Example](assets/U252 - Unsaved Data Warning.png)
 
 ###### [Style [U253](#style-u253)]
 
@@ -363,6 +386,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Must show fields failing validation rules
 
+![Example](assets/U253 - Bootstrap Validation Classes.png)
 
 ###### [Style [U254](#style-u254)]
 
@@ -372,7 +396,7 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: tooltips are unreliable and useless on mobile browsers
 
-
+![Example](assets/U254 - Dynamic Validation Panel.png)
 
 ###### [Style [U255](#style-u255)]
 
@@ -386,7 +410,7 @@ Style guide for Web Application layout (HTML)
 
 - Users must be able to do a full edit cycle using the keyboard
 
-*Why?*: Keyboard entry is generally the fastest data entry mechansim, and requiring mouse clicks greatly slows down this process
+*Why?*: Keyboard entry is generally the fastest data entry mechanism, and requiring mouse clicks greatly slows down this process
 
 
 
@@ -396,17 +420,21 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Basic CRUD functionality that should be consistent between pages
 
+![Example](assets/U257 - Edit Menu Options.png)
+
 ###### [Style [U258](#style-u258)]
 
 - Explicitly specify spellcheck attribute on text `<input>`'s and `<textarea>`
 
-*Why?*: Users used tospellcheck in their email, word processing applications
+*Why?*: Users used to spellcheck in their email, word processing applications
 
 ###### [Style [U259](#style-u259)]
 
 - Enable typeahead for all lookup data (via lookup tables or related entities).  For non-standard lookup, create a dynamic lookup based on distinct values within that particular column. 
 
 *Why?*: Helps user to select the correct codes / options for the particular field
+
+![Example](assets/U259 - Typeahead for Lookup Data.png)
 
 ###### [Style [U260](#style-u260)]
 
@@ -427,6 +455,8 @@ Style guide for Web Application layout (HTML)
 - Page should show when the entity was last updated / created and last user to update
 
 *Why?*: Basic auditing data that can help quickly answer questions about the entity (e.g. did something change recently?)
+
+![Example](assets/U262 - Last Time Updated.png)
 
 ###### [Style [U263](#style-u263)]
 
@@ -449,7 +479,7 @@ Style guide for Web Application layout (HTML)
 
 ###### [Style [U266](#style-u266)]
 
-- Keyboard shortcuts should be displayed next to menu items, or via tooltips on save/edit/cancel buttons
+- Keyboard shortcuts should be displayed next to menu items, or via tooltips on save/edit/cancel buttons (note - avoid re-purposing standard [shortcuts](https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts))
 
 *Why?*: Allows user to more easily discover the existence of keyboard shortcuts 
 
@@ -461,17 +491,23 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: User needs to understand the age of the printed data
 
+![Example](assets/U300 - Include Date Printed.png)
+
 ###### [Style [U301](#style-u301)]
 
 - All reports must include the report file / template in the footer
 
 *Why?*: Needed to quickly locate the appropriate source file of the report
 
+![Example](assets/U301 - Include Report File Name.png)
+
 ###### [Style [U302](#style-u302)]
 
 - All Reports should show page X of Y in the footer.  
 
 *Why?*: Needed to inform the user how many pages they have, and where they are in the stack. 
+
+![Example](assets/U302 - Include Page X of Y.png)
 
 ## Security
 
@@ -494,9 +530,11 @@ Style guide for Web Application layout (HTML)
 
 - Page URL's must be secured so that if the user gets a link to a page they do not have access to, they are re-routed to an accessed denied page.  
 
-*Why?*: user may have a bookmark or be sent a link - do not assume that they are accessing from a button or hyperlink on the page.  
+*Why?*: user may have a bookmark or receive a link - do not assume that they are accessing from a button or hyperlink on the page.  
 
 *Why?*: user may try to craft a custom url
+
+![Example](assets/U352 - Application Access Denied.png)
 
 ###### [Style [U353](#style-u353)]
 
@@ -504,11 +542,15 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Convenience for the user
 
+![Example](assets/U353 - Request Access Dialog.png)
+
 ###### [Style [U354](#style-u354)]
 
 - Access denied page should include a link to go back to previous page or main application menu
 
 *Why?*: Convenience for the user
+
+![Example](assets/U354 - Go to Previous Page.png)
 
 
 ###### [Style [U355](#style-u355)]
@@ -532,7 +574,7 @@ Style guide for Web Application layout (HTML)
 
 - Vertical - access to specific routes / functions - meaning a subset of entities such as Edit Customers, but only west coast customers - should be handled via custom security tables linked to appropriate groups
 
-*Why?*: Using roles for vertial data would result in dozens or hundreds of new roles
+*Why?*: Using roles for vertical data would result in dozens or hundreds of new roles
 
 *Why?*: Tying security to handles within the data e.g. Customer Territory, means the security approach is always relevant to the current data.  
 
@@ -549,9 +591,20 @@ Style guide for Web Application layout (HTML)
 
 *Why?*: Prevent user from accidentally creating / updating entities in an unrelated area (e.g. entering a new order at the wrong factory)
 
+![Example](assets/U400 - User Default Location.png)
+
+
 ###### [Style [U401](#style-u401)]
 
 - Users should be able to specify a default landing page other than the main menu, possibly with a default search.  
 
 *Why?*: Application use can vary greatly between users, there is no one-size fits all landing page.  
 
+![Example](assets/U401 - Default Landing Page.png)
+
+
+###### [Style [U402](#style-u402)]
+
+- Store current user profile settings in a cookie
+
+*Why?*: Settings change infrequently, and can affect every page - do not require an additional back end hit to load data
